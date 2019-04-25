@@ -1,10 +1,8 @@
-package com.bubliglab.game.Sprites;
+package com.bubliglab.game.Sprites.Items;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.World;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Scenes.Hud;
 import com.bubliglab.game.Screens.PlayScreen;

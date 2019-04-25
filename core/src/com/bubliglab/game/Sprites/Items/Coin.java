@@ -1,11 +1,12 @@
-package com.bubliglab.game.Sprites;
+package com.bubliglab.game.Sprites.Items;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.math.Vector2;
+import com.bubliglab.game.Items.ItemDef;
+import com.bubliglab.game.Items.Mushroom;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Scenes.Hud;
 import com.bubliglab.game.Screens.PlayScreen;
@@ -28,8 +29,10 @@ public class Coin extends InteractiveTileObject {
 
         if (getCell().getTile().getId() == BLANK_COIN)
             MarioBros.manager.get("audio/sounds/bump.wav", Sound.class).play();
-        else
+        else {
             MarioBros.manager.get("audio/sounds/coin.wav", Sound.class).play();
+            screen.spawnItem(new ItemDef(new Vector2(body.getPosition().x, body.getPosition().y + 16 / MarioBros.PPM), Mushroom.class));
+        }
 
         getCell().setTile(tileSet.getTile(BLANK_COIN));
         Hud.addScore(100);

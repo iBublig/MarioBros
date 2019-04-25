@@ -12,9 +12,9 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Screens.PlayScreen;
-import com.bubliglab.game.Sprites.Brick;
-import com.bubliglab.game.Sprites.Coin;
-import com.bubliglab.game.Sprites.Goomba;
+import com.bubliglab.game.Sprites.Items.Brick;
+import com.bubliglab.game.Sprites.Items.Coin;
+import com.bubliglab.game.Sprites.Enemies.Goomba;
 
 public class B2WorldCreator {
 

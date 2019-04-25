@@ -1,4 +1,4 @@
-package com.bubliglab.game.Sprites;
+package com.bubliglab.game.Sprites.Enemies;
 
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;

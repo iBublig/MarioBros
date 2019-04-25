@@ -7,8 +7,8 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
 import com.bubliglab.game.MarioBros;
-import com.bubliglab.game.Sprites.Enemy;
-import com.bubliglab.game.Sprites.InteractiveTileObject;
+import com.bubliglab.game.Sprites.Enemies.Enemy;
+import com.bubliglab.game.Sprites.Items.InteractiveTileObject;
 
 public class WorldContactListener implements ContactListener {
 
