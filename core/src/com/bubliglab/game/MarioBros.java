@@ -21,6 +21,8 @@ public class MarioBros extends Game {
 	public static final short OBJECT_BIT = 32;
 	public static final short ENEMY_BIT = 64;
 	public static final short ENEMY_HEAD_BIT = 128;
+	public static final short ITEM_BIT = 256;
+	public static final short MARIO_HEAD_BIT = 512;
 
 	private SpriteBatch batch;
 
@@ -35,6 +37,8 @@ public class MarioBros extends Game {
 		manager.load("audio/sounds/coin.wav", Sound.class);
 		manager.load("audio/sounds/bump.wav", Sound.class);
 		manager.load("audio/sounds/breakblock.wav", Sound.class);
+		manager.load("audio/sounds/powerup_spawn.wav", Sound.class);
+		manager.load("audio/sounds/powerup.wav", Sound.class);
 		manager.finishLoading();
 
 		setScreen(new PlayScreen(this));

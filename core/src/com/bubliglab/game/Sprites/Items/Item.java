@@ -1,4 +1,4 @@
-package com.bubliglab.game.Items;
+package com.bubliglab.game.Sprites.Items;
 
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -7,6 +7,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Screens.PlayScreen;
+import com.bubliglab.game.Sprites.Mario;
 
 public abstract class Item extends Sprite {
     protected PlayScreen screen;
@@ -16,7 +17,7 @@ public abstract class Item extends Sprite {
     protected boolean destroyed;
     protected Body body;
 
-    public Item(PlayScreen screen, float x, float y) {
+    Item(PlayScreen screen, float x, float y) {
         this.screen = screen;
         this.world = screen.getWorld();
         setPosition(x, y);
@@ -27,7 +28,7 @@ public abstract class Item extends Sprite {
     }
 
     public abstract void defineItem();
-    public abstract void use();
+    public abstract void use(Mario mario);
 
     public void update(float dt){
         if (toDestroy && !destroyed){
@@ -41,7 +42,14 @@ public abstract class Item extends Sprite {
             super.draw(batch);
     }
 
-    public void destroy(){
+    void destroy(){
         toDestroy = true;
+    }
+
+    public void reverseVelocity(boolean x, boolean y){
+        if (x)
+            velocity.x = -velocity.x;
+        if (y)
+            velocity.y = -velocity.y;
     }
 }

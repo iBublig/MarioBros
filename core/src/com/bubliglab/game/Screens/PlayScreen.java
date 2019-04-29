@@ -16,17 +16,18 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.bubliglab.game.Items.Item;
-import com.bubliglab.game.Items.Mushroom;
+import com.bubliglab.game.Sprites.Items.Item;
+import com.bubliglab.game.Sprites.Items.Mushroom;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Scenes.Hud;
 import com.bubliglab.game.Sprites.Enemies.Enemy;
-import com.bubliglab.game.Items.ItemDef;
-import com.bubliglab.game.Sprites.TileObjects.Mario;
+import com.bubliglab.game.Sprites.Items.ItemDef;
+import com.bubliglab.game.Sprites.Mario;
 import com.bubliglab.game.Tools.B2WorldCreator;
 import com.bubliglab.game.Tools.WorldContactListener;
 
 import java.util.PriorityQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class PlayScreen implements Screen {
 
@@ -50,7 +51,7 @@ public class PlayScreen implements Screen {
     private Music music;
 
     private Array<Item> items;
-    private PriorityQueue<ItemDef> itemsToSpawn;
+    private LinkedBlockingQueue<ItemDef> itemsToSpawn;
 
     public PlayScreen(MarioBros game) {
         atlas = new TextureAtlas("Mario_and_Enemies.atlas");
@@ -79,7 +80,7 @@ public class PlayScreen implements Screen {
         music.play();
 
         items = new Array<Item>();
-        itemsToSpawn = new PriorityQueue<ItemDef>();
+        itemsToSpawn = new LinkedBlockingQueue<ItemDef>();
 
 
     }

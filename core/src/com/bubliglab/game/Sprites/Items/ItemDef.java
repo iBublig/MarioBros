@@ -1,4 +1,4 @@
-package com.bubliglab.game.Items;
+package com.bubliglab.game.Sprites.Items;
 
 import com.badlogic.gdx.math.Vector2;
 

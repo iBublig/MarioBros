@@ -12,8 +12,8 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 import com.bubliglab.game.MarioBros;
 import com.bubliglab.game.Screens.PlayScreen;
-import com.bubliglab.game.Sprites.Items.Brick;
-import com.bubliglab.game.Sprites.Items.Coin;
+import com.bubliglab.game.Sprites.TileObjects.Brick;
+import com.bubliglab.game.Sprites.TileObjects.Coin;
 import com.bubliglab.game.Sprites.Enemies.Goomba;
 
 public class B2WorldCreator {
@@ -60,15 +60,13 @@ public class B2WorldCreator {
         }
 
         for (MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rectangle = ((RectangleMapObject) object).getRectangle();
 
-            new Coin(screen, rectangle);
+            new Coin(screen, object);
         }
 
         for (MapObject object : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)){
-            Rectangle rectangle = ((RectangleMapObject) object).getRectangle();
 
-            new Brick(screen, rectangle);
+            new Brick(screen, object);
         }
 
         // Create all goombas
