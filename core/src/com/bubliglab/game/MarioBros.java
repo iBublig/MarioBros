@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.bubliglab.game.Screens.PlayScreen;
 
 public class MarioBros extends Game {
+	// Test
 
 	public static final int V_WIDTH = 400;
 	public static final int V_HEIGHT= 208;
