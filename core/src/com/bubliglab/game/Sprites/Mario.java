@@ -290,7 +290,7 @@ public class Mario extends Sprite {
         b2body.createFixture(fixtureDef).setUserData(this);
 
         EdgeShape head = new EdgeShape();
-        head.set(new Vector2(-2 / MarioBros.PPM, 9 / MarioBros.PPM), new Vector2(2 / MarioBros.PPM, 9 / MarioBros.PPM));
+        head.set(new Vector2(-2 / MarioBros.PPM, 6 / MarioBros.PPM), new Vector2(2 / MarioBros.PPM, 6 / MarioBros.PPM));
 
         fixtureDef.filter.categoryBits = MarioBros.MARIO_HEAD_BIT;
         fixtureDef.shape = head;
